@@ -14,7 +14,7 @@ class UsersRepositoryInMemory implements IUsersRepository {
         return user;
     }
     async list(): Promise<User[]> {
-        throw new Error("Method not implemented.");
+        return this.users
     }
     async create({ name, password, email, driver_license, }: ICreateUserDTO): Promise<User> {
         const user = new User();

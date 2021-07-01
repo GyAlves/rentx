@@ -1,8 +1,12 @@
 import 'reflect-metadata';
+import 'express-async-errors';
 
 import express, { NextFunction, Request, Response } from 'express';
 import { router } from './routes/index';
 import { AppError } from '../../errors/AppError';
+
+import '../../container';
+import '../typeorm/index';
 
 const app = express();
 

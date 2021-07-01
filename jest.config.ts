@@ -1,6 +1,6 @@
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
- * https://jestjs.io/docs/configuration
+ * https://jestjs.io/docs/en/configuration.html
  */
 
 export default {
@@ -11,7 +11,7 @@ export default {
     bail: true,
 
     // The directory where Jest should store its cached dependency information
-    // cacheDirectory: "/private/var/folders/4v/29nz969179ldwj0c2cb6wcsh0000gn/T/jest_dx",
+    // cacheDirectory: "/tmp/jest_rs",
 
     // Automatically clear mock calls and instances between every test
     clearMocks: true,
@@ -34,12 +34,12 @@ export default {
     coverageProvider: 'v8',
 
     // A list of reporter names that Jest uses when writing coverage reports
-    // coverageReporters: [
-    //   "json",
-    //   "text",
-    //   "lcov",
-    //   "clover"
-    // ],
+    coverageReporters: [
+        "json",
+        "text",
+        "lcov",
+        "clover"
+    ],
 
     // An object that configures minimum threshold enforcement for coverage results
     // coverageThreshold: undefined,
@@ -73,10 +73,10 @@ export default {
     // An array of file extensions your modules use
     // moduleFileExtensions: [
     //   "js",
+    //   "json",
     //   "jsx",
     //   "ts",
     //   "tsx",
-    //   "json",
     //   "node"
     // ],
 
@@ -137,7 +137,7 @@ export default {
     // snapshotSerializers: [],
 
     // The test environment that will be used for testing
-    // testEnvironment: "jest-environment-node",
+    testEnvironment: 'node',
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
@@ -160,7 +160,7 @@ export default {
     // testResultsProcessor: undefined,
 
     // This option allows use of a custom test runner
-    // testRunner: "jest-circus/runner",
+    // testRunner: "jasmine2",
 
     // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
     // testURL: "http://localhost",

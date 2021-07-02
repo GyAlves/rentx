@@ -1,4 +1,5 @@
 import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
+import { IUpdateUserDTO } from '../dtos/IUpdateUserDTO';
 import { User } from '../infra/typeorm/entities/User';
 
 interface IUsersRepository {
@@ -11,6 +12,7 @@ interface IUsersRepository {
         email,
         driver_license,
     }: ICreateUserDTO): Promise<User>;
+    update({ name, email, driver_license }: IUpdateUserDTO): Promise<User>;
 }
 
 export { ICreateUserDTO, IUsersRepository };

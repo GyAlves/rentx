@@ -12,11 +12,6 @@ class ListUsersUseCase {
 
     async execute(): Promise<User[]> {
         const users = await this.usersRepository.list();
-
-        if (!users) {
-            throw new AppError("Users not found")
-        }
-
         return users
     }
 }

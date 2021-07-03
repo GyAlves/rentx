@@ -13,6 +13,7 @@ interface IUsersRepository {
         driver_license,
     }: ICreateUserDTO): Promise<User>;
     update({ name, email, driver_license }: IUpdateUserDTO): Promise<User>;
+    deleteById(user_id: string): Promise<void>;
 }
 
 export { ICreateUserDTO, IUsersRepository };

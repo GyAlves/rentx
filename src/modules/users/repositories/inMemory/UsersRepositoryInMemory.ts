@@ -52,6 +52,10 @@ class UsersRepositoryInMemory implements IUsersRepository {
 
     }
 
+    async deleteById(user_id: string): Promise<void> {
+        this.users.filter(user => user.id !== user_id)
+    }
+
 }
 
 export { UsersRepositoryInMemory }

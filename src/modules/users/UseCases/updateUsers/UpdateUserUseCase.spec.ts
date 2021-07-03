@@ -10,7 +10,7 @@ let updateUserUseCase: UpdateUsersUseCase;
 let listUserByIdUseCase: ListUserByIdUseCase;
 let usersRepositoryInMemory: UsersRepositoryInMemory;
 
-describe("List Users", () => {
+describe("Update User", () => {
     beforeEach(() => {
         usersRepositoryInMemory = new UsersRepositoryInMemory();
         updateUserUseCase = new UpdateUsersUseCase(usersRepositoryInMemory);

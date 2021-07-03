@@ -87,6 +87,15 @@ class UsersRepository implements IUsersRepository {
         const findUser = await this.repository.findOne(user_id);
         return findUser
     }
+
+    async deleteById(user_id: string): Promise<void> {
+        await getConnection()
+            .createQueryBuilder()
+            .delete()
+            .from(User)
+            .where("id = :id", { id: user_id })
+            .execute()
+    }
 }
 
 export { UsersRepository };
